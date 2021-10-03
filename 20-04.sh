@@ -139,16 +139,15 @@ read -p "Do you want to install gajim? Then press y!"
 if [[ $REPLY =~ ^[Jj]$ ]]
 then
 	pakete=`echo "$pakete gajim-plugininstaller gajim-rostertweaks gajim-urlimagepreview gajim-omemo"`
-fi
-
-read -p "Soll gajim für alle User automatisch gestartet werden? Dann drücke j!"
-#echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Jj]$ ]]
-then
-	sudo sh -c 'echo "[Desktop Entry]" > /etc/xdg/autostart/gajim.desktop'
-	sudo sh -c 'echo "Type=gajim" >> /etc/xdg/autostart/gajim.desktop'
-	sudo sh -c 'echo "Name=gajim" >> /etc/xdg/autostart/gajim.desktop'
-	sudo sh -c 'echo "Exec=gajim" >> /etc/xdg/autostart/gajim.desktop'
+	read -p "Soll gajim für alle User automatisch gestartet werden? Dann drücke j!"
+    #echo    # (optional) move to a new line
+    if [[ $REPLY =~ ^[Jj]$ ]]
+    then
+        sudo sh -c 'echo "[Desktop Entry]" > /etc/xdg/autostart/gajim.desktop'
+        sudo sh -c 'echo "Type=gajim" >> /etc/xdg/autostart/gajim.desktop'
+        sudo sh -c 'echo "Name=gajim" >> /etc/xdg/autostart/gajim.desktop'
+        sudo sh -c 'echo "Exec=gajim" >> /etc/xdg/autostart/gajim.desktop'
+    fi
 fi
 
 paketerec="digikam exiv2 kipi-plugins graphicsmagick-imagemagick-compat"
