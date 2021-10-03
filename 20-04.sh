@@ -197,7 +197,7 @@ sudo update-alternatives --set x-terminal-emulator /usr/bin/konsole
 
 sudo dpkg-reconfigure libdvd-pkg
 #flathub
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 #https://github.com/Bajoja/indicator-kdeconnect
 read -p "Soll das Programm KDE-Connect-Monitor (Zugriff von und aufs Handy) installiert werden? Dann drücke j!"
