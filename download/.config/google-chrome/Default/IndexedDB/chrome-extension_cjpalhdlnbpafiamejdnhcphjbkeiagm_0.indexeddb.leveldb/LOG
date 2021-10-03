@@ -1,0 +1,5 @@
+2020/05/05-01:18:23.094 278bc Reusing MANIFEST /home/jokergermany/.config/google-chrome/Default/IndexedDB/chrome-extension_cjpalhdlnbpafiamejdnhcphjbkeiagm_0.indexeddb.leveldb/MANIFEST-000001
+2020/05/05-01:18:25.105 278dd Level-0 table #5: started
+2020/05/05-01:18:25.118 278dd Level-0 table #5: 217 bytes OK
+2020/05/05-01:18:25.137 278dd Delete type=0 #3
+2020/05/05-01:18:25.137 278dd Manual compaction at level-0 from (begin) .. (end); will stop at (end)

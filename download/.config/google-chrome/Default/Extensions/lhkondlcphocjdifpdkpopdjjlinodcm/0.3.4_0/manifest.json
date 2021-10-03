@@ -1,0 +1,25 @@
+{
+   "background": {
+      "scripts": [ "scripts/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "38": "images/icon-32.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Content Creator Amazon Affiliate"
+   },
+   "default_locale": "en",
+   "description": "__MSG_appDescription__",
+   "icons": {
+      "128": "images/icon-128.png",
+      "16": "images/icon-16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwlAEgWDlli82DSZ18FHdLEYtycTdf2EEYTh0IG5HC3hiVAOw2BDap6wse3ePSaWXEjG62YunI9J+CmeJmISh7nCkXUg6bWlg3cp7s+t92kdQiccpGUXLBMMhBO4gbHBEh5vVZTzDm0hzDU0SV2rvPIso358FNJ/vfJ4ouJjSDvUoGOhEoNk4LLvmLHo74Ux+exmJDAzru97pBf+c8M5+rvL04ZbrABtN2Z726HKw/T5WVId2Ca1oWeYaHfbqw61fuXfEd4qB3ovvkgC1x9DTMfvhcX7JpQdvRBfH+sUhDqgylIknXTR9qBl8dJn7VJVUb0BoCTbyAXV7uJ38aiiolwIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "permissions": [ "tabs", "webNavigation", "storage", "webRequest", "webRequestBlocking", "*://www.amazon.de/*", "*://www.amazon.co.uk/*", "*://www.amazon.com/*", "*://www.amazon.fr/*", "*://www.amazon.co.jp/*", "*://www.amazon.ca/*", "*://www.amazon.cn/*", "*://www.amazon.it/*", "*://www.amazon.es/*", "*://www.amazon.in/*", "*://www.amazon.com.br/*" ],
+   "short_name": "__MSG_shortName__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.3.4"
+}
