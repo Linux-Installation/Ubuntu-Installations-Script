@@ -19,7 +19,9 @@ This is my post Installation script which "automate" tasks which I do after inst
 - [ppa:lutris-team/lutris](https://lutris.net/)
 - activate Canoncial Partner repository
 
-### Flatpak packages
+### Flatpak packages/repository
+New Flatpak Repository: [Flathub](https://flathub.org)
+#### Flatpak Packages
 - (Optional) [Indicator-KDEConnect](https://flathub.org/apps/details/com.github.bajoja.indicator-kdeconnect)
 - (Optional) [Roger Router](https://flathub.org/apps/details/org.tabos.roger)
 
