@@ -117,6 +117,15 @@ then
 fi
 done
 fi
+#Gaming on AMD/Intel
+read -p "Möchtest du Games spielen und hast eine AMD/Intel Grafikkarte?"
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Jj]$ ]]
+then
+sudo add-apt-repository ppa:kisak/kisak-mesa
+	pakete=`echo "$pakete mesa-vulkan-drivers mesa-vulkan-drivers:i386"`
+fi
+
 #Laptop Akkulaufzeit
 read -p "Ist dies ein Laptop? Soll die Akkulaufzeit erhöht werden? Dann drücke j!"
 echo    # (optional) move to a new line
@@ -188,7 +197,7 @@ done
 #fi
 
 sudo apt-get update
-sudo apt-get -y upgrade
+sudo apt-get -y dist-upgrade
 echo $paketerec > paketerec.log
 sudo apt -y install --no-install-recommends $paketerec
 echo $pakete > pakete.log

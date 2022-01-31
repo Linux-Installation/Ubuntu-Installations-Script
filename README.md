@@ -17,6 +17,7 @@ This is my post Installation script which "automate" tasks which I do after inst
 - [Element](https://element.io/get-started)
 - [ppa:webupd8team/y-ppa-manager](https://launchpad.net/y-ppa-manager)
 - [ppa:lutris-team/lutris](https://lutris.net/)
+- (Optional) [Mesa for Gaming on AMD/Intel](https://github.com/ValveSoftware/Proton/wiki/Requirements#amdintel)
 - activate Canoncial Partner repository
 
 ### Flatpak packages/repository
@@ -24,11 +25,13 @@ New Flatpak Repository: [Flathub](https://flathub.org)
 #### Flatpak Packages
 - (Optional) [Indicator-KDEConnect](https://flathub.org/apps/details/com.github.bajoja.indicator-kdeconnect)
 - (Optional) [Roger Router](https://flathub.org/apps/details/org.tabos.roger)
+- (Optional) [ProtonUp-Qt](https://flathub.org/apps/details/net.davidotek.pupgui2)
 
 ### Additional installed Software
 - (Optional) [TLP](https://linrunner.de/tlp/)
 - (Optional) Chromium
 - (Optional) [Gajim](https://gajim.org/) + Plugins
+- (Optional) [Mesa for Gaming on AMD/Intel](https://github.com/ValveSoftware/Proton/wiki/Requirements#amdintel)
 - [digiKam](https://www.digikam.org/)
 - [Synaptic](https://www.nongnu.org/synaptic/)
 - [Krita](https://krita.org)
