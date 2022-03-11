@@ -241,6 +241,6 @@ fi
 #sudo snap install carnet
 
 sudo apt -y --fix-broken install
-
+sudo dpkg-reconfigure -plow unattended-upgrades
 #Aufräumen
 rm -rf $verzeichnis/Install-Skript
