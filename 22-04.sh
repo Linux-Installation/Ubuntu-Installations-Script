@@ -163,7 +163,7 @@ then
 fi
 
 paketerec="digikam exiv2 kipi-plugins graphicsmagick-imagemagick-compat"
-pakete=`echo "$pakete synaptic krita ubuntu-restricted-extras pidgin pinta nfs-common grub-customizer language-pack-kde-de y-ppa-manager libdvd-pkg smartmontools unoconv mediathekview python3-axolotl python3-gnupg gnome-software language-pack-de fonts-symbola vlc libxvidcore4 libfaac0 gnupg2 lutris dayon kate konsole element-desktop mate-menu"`
+pakete=`echo "$pakete synaptic krita ubuntu-restricted-extras pidgin pinta nfs-common grub-customizer language-pack-kde-de y-ppa-manager libdvd-pkg smartmontools unoconv mediathekview python3-axolotl python3-gnupg gnome-software language-pack-de fonts-symbola vlc libxvidcore4 libfaac0 gnupg2 lutris dayon kate konsole element-desktop mate-menu gnome-system-tools"`
 
 #Entfernen
 #pluma löschen, da ersatz ist konsole und kate
