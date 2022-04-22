@@ -219,7 +219,7 @@ if [[ $REPLY =~ ^[Jj]$ ]]
 then
 	##sudo add-apt-repository -y ppa:webupd8team/indicator-kdeconnect outdated!
 	sudo flatpak -y install flathub com.github.bajoja.indicator-kdeconnect
-	pakete=`echo "$pakete kdeconnect"`
+	sudo apt-get install kdeconnect
 fi
 
 #Fritz!Box
