@@ -1,6 +1,6 @@
 # Ubuntu Installation - Installations Script
 ## Suported Distributions
-In general all Ubuntu Distributions are supported, but this script was made for Ubuntu Mate 20.04 LTS
+In general all Ubuntu Distributions are supported, but this script was made for Ubuntu Mate 22.04 LTS.
 
 ## Why
 This is my post Installation script which "automate" tasks which I do after installing Ubuntu Mate.
