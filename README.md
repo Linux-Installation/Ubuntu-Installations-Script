@@ -15,8 +15,6 @@ This is my post Installation script which "automate" tasks which I do after inst
 
 ### software repositories
 - [Element](https://element.io/get-started)
-- [ppa:webupd8team/y-ppa-manager](https://launchpad.net/y-ppa-manager)
-- [ppa:lutris-team/lutris](https://lutris.net/)
 - (Optional) [Mesa for Gaming on AMD/Intel](https://github.com/ValveSoftware/Proton/wiki/Requirements#amdintel)
 - activate Canoncial Partner repository
 
@@ -41,7 +39,6 @@ New Flatpak Repository: [Flathub](https://flathub.org)
 - nfs-common
 - [grub-customizer](https://launchpad.net/grub-customizer)
 - language-pack-kde-de
-- [y-ppa-manager](https://launchpad.net/y-ppa-manager)
 - [libdvd-pkg](https://www.videolan.org/developers/libdvdcss.html)
 - [smartmontools](https://www.smartmontools.org/)
 - [unoconv](https://github.com/unoconv/unoconv)

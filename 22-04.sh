@@ -163,8 +163,10 @@ then
 fi
 
 paketerec="digikam exiv2 kipi-plugins graphicsmagick-imagemagick-compat"
-pakete=`echo "$pakete synaptic krita ubuntu-restricted-extras pidgin pinta nfs-common grub-customizer language-pack-kde-de y-ppa-manager libdvd-pkg smartmontools unoconv mediathekview python3-axolotl python3-gnupg gnome-software language-pack-de fonts-symbola vlc libxvidcore4 libfaac0 gnupg2 lutris dayon kate konsole element-desktop mate-menu gnome-system-tools"`
+pakete=`echo "$pakete synaptic krita ubuntu-restricted-extras pidgin pinta nfs-common grub-customizer language-pack-kde-de libdvd-pkg smartmontools unoconv mediathekview python3-axolotl python3-gnupg gnome-software language-pack-de fonts-symbola vlc libxvidcore4 libfaac0 gnupg2 lutris dayon kate konsole element-desktop mate-menu gnome-system-tools"`
 
+#no 22.04 yet
+#y-ppa-manager
 #Entfernen
 #pluma löschen, da ersatz ist konsole und kate
 read -p "Soll pluma gelöscht werden? Dann drücke j!"
@@ -182,8 +184,8 @@ echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https:/
 
 sudo add-apt-repository -y ppa:regal/dayon
 
-sudo add-apt-repository -y ppa:webupd8team/y-ppa-manager
-sudo add-apt-repository -y ppa:lutris-team/lutris
+#no 22.04 yet
+#sudo add-apt-repository -y ppa:webupd8team/y-ppa-manager
 
 #Aktiviert die Standard Ubuntu Quellen für Fremd-Software-Entwickler
 sudo add-apt-repository -y "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner" 
