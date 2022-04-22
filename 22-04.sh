@@ -1,10 +1,7 @@
 #!/bin/bash
-read -p "This Skript is WIP. It's not ready to use at the moment!"
-exit
 #(awk '{ print $2 }' /var/log/installer/media-info )
 rep=""
-#Installiere VLC
-pakete="vlc"
+pakete=""
 
 export DEBIAN_FRONTEND=noninteractive
 if [ $( cat /etc/issue | cut -d" " -f2 | cut -d. -f1-2 ) != 22.04 ]  
