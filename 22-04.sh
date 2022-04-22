@@ -162,8 +162,18 @@ then
     fi
 fi
 
+#Ubuntu Mate
+read -p "Are you using Ubuntu Mate and want to install the Advanced Mate Menu and a tool to administrativ users? Then press j!"
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Jj]$ ]]
+then
+    pakete=`echo "$pakete mate-menu gnome-system-tools"`
+fi
+
+mate-menu gnome-system-tools
+
 paketerec="digikam exiv2 kipi-plugins graphicsmagick-imagemagick-compat"
-pakete=`echo "$pakete synaptic krita ubuntu-restricted-extras pidgin pinta nfs-common grub-customizer language-pack-kde-de libdvd-pkg smartmontools unoconv mediathekview python3-axolotl python3-gnupg gnome-software language-pack-de fonts-symbola vlc libxvidcore4 libfaac0 gnupg2 lutris dayon kate konsole element-desktop mate-menu gnome-system-tools"`
+pakete=`echo "$pakete synaptic krita ubuntu-restricted-extras pidgin pinta nfs-common grub-customizer language-pack-kde-de libdvd-pkg smartmontools unoconv mediathekview python3-axolotl python3-gnupg gnome-software language-pack-de fonts-symbola vlc libxvidcore4 libfaac0 gnupg2 lutris dayon kate konsole element-desktop"`
 
 #no 22.04 yet
 #y-ppa-manager
