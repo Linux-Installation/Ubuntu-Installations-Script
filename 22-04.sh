@@ -168,7 +168,7 @@ then
 fi
 
 paketerec="digikam exiv2 kipi-plugins graphicsmagick-imagemagick-compat"
-pakete=`echo "$pakete synaptic krita ubuntu-restricted-extras pidgin pinta nfs-common language-pack-kde-de libdvd-pkg smartmontools unoconv mediathekview python3-axolotl python3-gnupg gnome-software gnome-software-plugin-flatpak language-pack-de fonts-symbola vlc libxvidcore4 libfaac0 gnupg2 lutris dayon kate konsole element-desktop"`
+pakete=`echo "$pakete synaptic krita-l10n ubuntu-restricted-extras pidgin pinta nfs-common language-pack-kde-de libdvd-pkg smartmontools unoconv mediathekview python3-axolotl python3-gnupg gnome-software gnome-software-plugin-flatpak language-pack-de fonts-symbola vlc libxvidcore4 libfaac0 gnupg2 lutris dayon kate konsole element-desktop"`
 
 #no 22.04 yet
 #y-ppa-manager
