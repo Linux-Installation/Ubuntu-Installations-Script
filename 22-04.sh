@@ -2,6 +2,7 @@
 #(awk '{ print $2 }' /var/log/installer/media-info )
 rep=""
 pakete=""
+service="" #be careful not fully implemented now!
 
 export DEBIAN_FRONTEND=noninteractive
 if [ $( cat /etc/issue | cut -d" " -f2 | cut -d. -f1-2 ) != 22.04 ]  
@@ -131,6 +132,8 @@ echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Jj]$ ]]
 then
 	pakete=`echo "$pakete tlp tlp-rdw smartmontools ethtool"`
+	service=`echo "$service tlp.service"`
+	#TODO Find PPA for TLPUI
 fi
 
 #Google Chrome
@@ -246,6 +249,10 @@ fi
 
 #sudo snap install carnet
 
+if [ service =! null ]
+then
+sudo systemctl enable $service
+fi
 sudo apt -y --fix-broken install
 sudo dpkg-reconfigure -plow unattended-upgrades
 #Aufräumen
