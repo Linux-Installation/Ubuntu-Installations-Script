@@ -249,7 +249,7 @@ fi
 
 #sudo snap install carnet
 
-if [ service =! null ]
+if [ ! -z $service ]
 then
 sudo systemctl enable $service
 fi
