@@ -133,7 +133,7 @@ if [[ $REPLY =~ ^[Jj]$ ]]
 then
 	pakete=`echo "$pakete tlp tlp-rdw smartmontools ethtool"`
 	service=`echo "$service tlp.service"`
-	#TODO Find PPA for TLPUI
+	#TODO Find PPA for TLPUI - https://github.com/d4nj1/TLPUI
 fi
 
 #Google Chrome
