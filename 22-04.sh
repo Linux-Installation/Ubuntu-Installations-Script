@@ -5,6 +5,9 @@ pakete=""
 service="" #be careful not fully implemented now!
 remove=""
 
+sudo apt-get update
+sudo apt-get -y dist-upgrade
+
 export DEBIAN_FRONTEND=noninteractive
 if [ $( cat /etc/issue | cut -d" " -f2 | cut -d. -f1-2 ) != 22.04 ]  
 then 
