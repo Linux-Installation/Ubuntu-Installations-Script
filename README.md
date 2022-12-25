@@ -55,6 +55,7 @@ New Flatpak Repository: [Flathub](https://flathub.org)
 - [kate](https://kate-editor.org)
 - [konsole](https://konsole.kde.org/)
 - [element-desktop](https://element.io/get-started)
+- [redshift](http://jonls.dk/redshift/)
 
 ### removed Software (if installed)
 - (Optional) pluma (replaced with kate)
