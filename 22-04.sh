@@ -126,8 +126,8 @@ read -p "Möchtest du Games spielen und hast eine AMD/Intel Grafikkarte?"
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Jj]$ ]]
 then
-sudo add-apt-repository -y ppa:kisak/kisak-mesa
-	pakete=`echo "$pakete mesa-vulkan-drivers mesa-vulkan-drivers:i386"`
+  sudo add-apt-repository ppa:kisak/kisak-mesa
+	pakete=`echo "$pakete dxvk mesa-vulkan-drivers mesa-vulkan-drivers:i386"`
 fi
 
 #Laptop Akkulaufzeit
@@ -186,7 +186,7 @@ then
 fi
 
 paketerec="digikam exiv2 kipi-plugins graphicsmagick-imagemagick-compat"
-pakete=`echo "$pakete synaptic krita-l10n ubuntu-restricted-extras pidgin pinta nfs-common language-pack-kde-de libdvd-pkg smartmontools unoconv mediathekview python3-axolotl python3-gnupg gnome-software gnome-software-plugin-flatpak language-pack-de fonts-symbola vlc libxvidcore4 libfaac0 gnupg2 lutris dayon kate konsole element-desktop firefox-locale-de firefox"`
+pakete=`echo "$pakete synaptic krita-l10n ubuntu-restricted-extras pidgin pinta nfs-common language-pack-kde-de libdvd-pkg smartmontools unoconv mediathekview python3-axolotl python3-gnupg gnome-software gnome-software-plugin-flatpak language-pack-de fonts-symbola vlc libxvidcore4 libfaac0 gnupg2 lutris dayon kate konsole element-desktop redshift-gtk firefox-locale-de firefox"`
 remove=`echo "$remove firefox"`
 
 sudo snap remove firefox
