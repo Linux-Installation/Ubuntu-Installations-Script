@@ -3,6 +3,10 @@
 rep=""
 pakete=""
 service="" #be careful not fully implemented now!
+remove=""
+
+sudo apt-get update
+sudo apt-get -y dist-upgrade
 
 export DEBIAN_FRONTEND=noninteractive
 if [ $( cat /etc/issue | cut -d" " -f2 | cut -d. -f1-2 ) != 22.04 ]  
@@ -122,7 +126,7 @@ read -p "Möchtest du Games spielen und hast eine AMD/Intel Grafikkarte?"
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Jj]$ ]]
 then
-sudo add-apt-repository ppa:kisak/kisak-mesa
+  sudo add-apt-repository ppa:kisak/kisak-mesa
 	pakete=`echo "$pakete dxvk mesa-vulkan-drivers mesa-vulkan-drivers:i386"`
 fi
 
@@ -170,9 +174,6 @@ then
     pakete=`echo "$pakete mate-menu gnome-system-tools"`
 fi
 
-paketerec="digikam exiv2 kipi-plugins graphicsmagick-imagemagick-compat"
-pakete=`echo "$pakete synaptic krita-l10n ubuntu-restricted-extras pidgin pinta nfs-common language-pack-kde-de libdvd-pkg smartmontools unoconv mediathekview python3-axolotl python3-gnupg gnome-software gnome-software-plugin-flatpak language-pack-de fonts-symbola vlc libxvidcore4 libfaac0 gnupg2 lutris dayon kate konsole element-desktop redshift-gtk"`
-
 #no 22.04 yet
 #y-ppa-manager
 #Entfernen
@@ -181,14 +182,28 @@ read -p "Soll pluma gelöscht werden? Dann drücke j!"
 #echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Jj]$ ]]
 then
-    sudo apt-get -y remove pluma*
+	remove=`echo "$remove pluma*"`
 fi
+
+paketerec="digikam exiv2 kipi-plugins graphicsmagick-imagemagick-compat"
+pakete=`echo "$pakete synaptic krita-l10n ubuntu-restricted-extras pidgin pinta nfs-common language-pack-kde-de libdvd-pkg smartmontools unoconv mediathekview python3-axolotl python3-gnupg gnome-software gnome-software-plugin-flatpak language-pack-de fonts-symbola vlc libxvidcore4 libfaac0 gnupg2 lutris dayon kate konsole element-desktop redshift-gtk firefox-locale-de firefox"`
+remove=`echo "$remove firefox"`
+
+sudo snap remove firefox
+sudo apt remove -y $remove
 
 #Updaten
 cd ~/Downloads/
 sudo apt install -y wget apt-transport-https
 sudo wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main" | sudo tee /etc/apt/sources.list.d/element-io.list
+
+#Firefox ppa
+sudo add-apt-repository -y ppa:mozillateam/ppa
+#Don't use canonical firefox package
+sudo sh -c 'echo "Package: firefox*" >> /etc/apt/preferences.d/mozillateamppa'
+sudo sh -c 'echo "Pin: release o=LP-PPA-mozillateam" >> /etc/apt/preferences.d/mozillateamppa'
+sudo sh -c 'echo "Pin-Priority: 501" >> /etc/apt/preferences.d/mozillateamppa'
 
 sudo add-apt-repository -y ppa:regal/dayon
 
