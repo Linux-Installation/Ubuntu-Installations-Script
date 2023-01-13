@@ -270,5 +270,6 @@ sudo systemctl enable $service
 fi
 sudo apt -y --fix-broken install
 sudo dpkg-reconfigure -plow unattended-upgrades
+echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";' | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
 #Aufräumen
 rm -rf $verzeichnis/Install-Skript
