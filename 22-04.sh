@@ -140,12 +140,14 @@ then
 	#TODO Find PPA for TLPUI - https://github.com/d4nj1/TLPUI
 fi
 
-#Google Chrome
-read -p "Soll Chromium installiert werden? Dann drücke j!"
+#Vivaldi (Chromium based Browser)
+read -p "Soll Vivaldi (Chromium based Browser) installiert werden? Dann drücke j!"
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Jj]$ ]]
 then
-    pakete=`echo "$pakete chromium-browser"`
+    wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | gpg --dearmor | sudo dd of=/usr/share/keyrings/vivaldi-browser.gpg
+    echo "deb [signed-by=/usr/share/keyrings/vivaldi-browser.gpg arch=$(dpkg --print-architecture)] https://repo.vivaldi.com/archive/deb/ stable main" | sudo dd of=/etc/apt/sources.list.d/vivaldi-archive.list
+    pakete=`echo "$pakete vivaldi-stable"`
 fi
 
 
