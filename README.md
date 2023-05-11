@@ -28,7 +28,7 @@ New Flatpak Repository: [Flathub](https://flathub.org)
 
 ### Additional installed Software
 - (Optional) [TLP](https://linrunner.de/tlp/)
-- (Optional) Chromium
+- (Optional) [Vivaldi](https://vivaldi.com/de/)-stable
 - (Optional) [Gajim](https://gajim.org/) + Plugins
 - (Optional) [Mesa for Gaming on AMD/Intel](https://github.com/ValveSoftware/Proton/wiki/Requirements#amdintel)
 - [digiKam](https://www.digikam.org/)
