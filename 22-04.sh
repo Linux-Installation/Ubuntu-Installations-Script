@@ -130,16 +130,6 @@ then
 	pakete=`echo "$pakete dxvk mesa-vulkan-drivers mesa-vulkan-drivers:i386"`
 fi
 
-#Laptop Akkulaufzeit
-read -p "Ist dies ein Laptop? Soll die Akkulaufzeit erhöht werden? Dann drücke j!"
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Jj]$ ]]
-then
-	pakete=`echo "$pakete tlp tlp-rdw smartmontools ethtool"`
-	service=`echo "$service tlp.service"`
-	#TODO Find PPA for TLPUI - https://github.com/d4nj1/TLPUI
-fi
-
 #Vivaldi (Chromium based Browser)
 read -p "Soll Vivaldi (Chromium based Browser) installiert werden? Dann drücke j!"
 echo    # (optional) move to a new line
@@ -260,9 +250,19 @@ read -p "Soll das Programm ProtonUp-Qt installiert werden? Dann drücke j!"
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Jj]$ ]]
 then
-flatpak install flathub net.davidotek.pupgui2  
+sudo flatpak install flathub net.davidotek.pupgui2  
 fi
 
+#Laptop Akkulaufzeit
+read -p "Ist dies ein Laptop? Soll die Akkulaufzeit erhöht werden? Dann drücke j!"
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Jj]$ ]]
+then
+	pakete=`echo "$pakete tlp tlp-rdw smartmontools ethtool"`
+	service=`echo "$service tlp.service"`
+	sudo flatpak install flathub com.github.d4nj1.tlpui
+	#TODO Find PPA for TLPUI - https://github.com/d4nj1/TLPUI
+fi
 
 #sudo snap install carnet
 
