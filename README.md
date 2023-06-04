@@ -63,7 +63,7 @@ New Flatpak Repository: [Flathub](https://flathub.org)
 - (Optional) pluma (replaced with kate)
 
 ### other
-At the end of the script hardware probe will be anonymously collected hardware details of the computers (devices information and depersonalized system logs) for helping people to collaboratively debug hardware related issues, check for Linux-compatibility and find drivers. For more Informations look here: https://linux-hardware.org/
+At the end of the script hardware probe will anonymously collect hardware details of the computers (devices information and depersonalized system logs) for helping people to collaboratively debug hardware related issues, check for Linux-compatibility and find drivers. For more Informations look here: https://linux-hardware.org/
 
 ## TODO
 - [ ] [Translate to english](https://github.com/Ubuntu-Installation/Installations-Script/issues/1)
