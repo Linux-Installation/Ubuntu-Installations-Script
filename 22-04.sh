@@ -177,7 +177,7 @@ then
 	remove=`echo "$remove pluma*"`
 fi
 
-paketerec="digikam exiv2 kipi-plugins graphicsmagick-imagemagick-compat"
+paketerec="digikam exiv2 kipi-plugins graphicsmagick-imagemagick-compat hw-probe"
 pakete=`echo "$pakete synaptic krita-l10n ubuntu-restricted-extras pidgin pinta nfs-common language-pack-kde-de libdvd-pkg smartmontools unoconv mediathekview python3-axolotl python3-gnupg gnome-software gnome-software-plugin-flatpak language-pack-de fonts-symbola vlc libxvidcore4 libfaac0 gnupg2 lutris dayon kate konsole element-desktop redshift-gtk firefox-locale-de firefox"`
 remove=`echo "$remove firefox*"`
 
@@ -250,7 +250,7 @@ read -p "Soll das Programm ProtonUp-Qt installiert werden? Dann drücke j!"
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Jj]$ ]]
 then
-sudo flatpak install flathub net.davidotek.pupgui2  
+sudo flatpak -y install flathub net.davidotek.pupgui2  
 fi
 
 #Laptop Akkulaufzeit
@@ -260,7 +260,7 @@ if [[ $REPLY =~ ^[Jj]$ ]]
 then
 	pakete=`echo "$pakete tlp tlp-rdw smartmontools ethtool"`
 	service=`echo "$service tlp.service"`
-	sudo flatpak install flathub com.github.d4nj1.tlpui
+	sudo flatpak -y install flathub com.github.d4nj1.tlpui
 	#TODO Find PPA for TLPUI - https://github.com/d4nj1/TLPUI
 fi
 
@@ -273,5 +273,9 @@ fi
 sudo apt -y --fix-broken install
 sudo dpkg-reconfigure -plow unattended-upgrades
 echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";' | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
+#Hardware probe
+sudo -E hw-probe -all -upload
+sudo apt-get purge -y hw-probe
+
 #Aufräumen
 rm -rf $verzeichnis/Install-Skript
