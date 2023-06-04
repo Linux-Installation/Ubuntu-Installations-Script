@@ -25,6 +25,7 @@ New Flatpak Repository: [Flathub](https://flathub.org)
 - (Optional) [Indicator-KDEConnect](https://flathub.org/apps/details/com.github.bajoja.indicator-kdeconnect)
 - (Optional) [Roger Router](https://flathub.org/apps/details/org.tabos.roger)
 - (Optional) [ProtonUp-Qt](https://flathub.org/apps/details/net.davidotek.pupgui2)
+- (Optional) [TLPUI](https://flathub.org/apps/com.github.d4nj1.tlpui)
 
 ### Additional installed Software
 - (Optional) [TLP](https://linrunner.de/tlp/)
