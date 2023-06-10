@@ -126,7 +126,7 @@ read -p "Möchtest du Games spielen und hast eine AMD/Intel Grafikkarte? Dann dr
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Jj]$ ]]
 then
-  sudo add-apt-repository ppa:kisak/kisak-mesa
+  sudo add-apt-repository -y ppa:kisak/kisak-mesa
 	pakete=`echo "$pakete dxvk mesa-vulkan-drivers mesa-vulkan-drivers:i386"`
 fi
 
