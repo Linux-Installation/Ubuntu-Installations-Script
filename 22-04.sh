@@ -122,7 +122,7 @@ fi
 done
 fi
 #Gaming on AMD/Intel
-read -p "Möchtest du Games spielen und hast eine AMD/Intel Grafikkarte?"
+read -p "Möchtest du Games spielen und hast eine AMD/Intel Grafikkarte? Dann drücke j!"
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Jj]$ ]]
 then
