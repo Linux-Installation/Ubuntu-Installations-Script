@@ -25,10 +25,11 @@ New Flatpak Repository: [Flathub](https://flathub.org)
 - (Optional) [Indicator-KDEConnect](https://flathub.org/apps/details/com.github.bajoja.indicator-kdeconnect)
 - (Optional) [Roger Router](https://flathub.org/apps/details/org.tabos.roger)
 - (Optional) [ProtonUp-Qt](https://flathub.org/apps/details/net.davidotek.pupgui2)
+- (Optional) [TLPUI](https://flathub.org/apps/com.github.d4nj1.tlpui)
 
 ### Additional installed Software
 - (Optional) [TLP](https://linrunner.de/tlp/)
-- (Optional) Chromium
+- (Optional) [Vivaldi](https://vivaldi.com/de/)-stable
 - (Optional) [Gajim](https://gajim.org/) + Plugins
 - (Optional) [Mesa for Gaming on AMD/Intel](https://github.com/ValveSoftware/Proton/wiki/Requirements#amdintel)
 - [digiKam](https://www.digikam.org/)
@@ -59,6 +60,9 @@ New Flatpak Repository: [Flathub](https://flathub.org)
 
 ### removed Software (if installed)
 - (Optional) pluma (replaced with kate)
+
+### other
+At the end of the script hardware probe will anonymously collect hardware details of the computers (devices information and depersonalized system logs) for helping people to collaboratively debug hardware related issues, check for Linux-compatibility and find drivers. For more Informations look here: https://linux-hardware.org/
 
 ## TODO
 - [ ] [Translate to english](https://github.com/Ubuntu-Installation/Installations-Script/issues/1)
