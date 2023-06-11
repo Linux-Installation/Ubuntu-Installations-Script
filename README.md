@@ -45,7 +45,6 @@ New Flatpak Repository: [Flathub](https://flathub.org)
 - [unoconv](https://github.com/unoconv/unoconv)
 - [mediathekview](https://mediathekview.de/)
 - [python3-gnupg](https://pypi.org/project/python-gnupg/)
-- [flatpak](https://flatpak.org/)
 - [gnome-software](https://gitlab.gnome.org/GNOME/gnome-software) + flatpak plugin
 - [fonts-symbola](https://fontlibrary.org/de/font/symbola)
 - [vlc](https://www.videolan.org/vlc/index.de.html)
