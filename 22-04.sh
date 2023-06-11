@@ -158,6 +158,46 @@ then
     fi
 fi
 
+#flathub
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+#https://github.com/Bajoja/indicator-kdeconnect
+read -p "Soll das Programm KDE-Connect-Monitor (Zugriff von und aufs Handy) installiert werden? Dann drücke j!"
+#echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Jj]$ ]]
+then
+	##sudo add-apt-repository -y ppa:webupd8team/indicator-kdeconnect outdated!
+	sudo flatpak -y install flathub com.github.bajoja.indicator-kdeconnect
+	pakete=`echo "$pakete kdeconnect"`
+fi
+
+#Fritz!Box
+read -p "Soll das Programm Roger Router (ehemals ffgtk) für die Fritz!Box installiert werden? Dann drücke j!"
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Jj]$ ]]
+then
+sudo flatpak -y install flathub org.tabos.roger  
+fi
+
+#ProtonUp
+read -p "Soll das Programm ProtonUp-Qt installiert werden? Dann drücke j!"
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Jj]$ ]]
+then
+sudo flatpak -y install flathub net.davidotek.pupgui2  
+fi
+
+#Laptop Akkulaufzeit
+read -p "Ist dies ein Laptop? Soll die Akkulaufzeit erhöht werden? Dann drücke j!"
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Jj]$ ]]
+then
+	pakete=`echo "$pakete tlp tlp-rdw smartmontools ethtool"`
+	service=`echo "$service tlp.service"`
+	sudo flatpak -y install flathub com.github.d4nj1.tlpui
+	#TODO Find PPA for TLPUI - https://github.com/d4nj1/TLPUI
+fi
+
 #Ubuntu Mate
 read -p "Are you using Ubuntu Mate and want to install the Advanced Mate Menu and a tool to administrativ users? Then press j!"
 echo    # (optional) move to a new line
@@ -224,45 +264,7 @@ sudo apt -y install $pakete
 sudo update-alternatives --set x-terminal-emulator /usr/bin/konsole
 
 sudo dpkg-reconfigure libdvd-pkg
-#flathub
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-#https://github.com/Bajoja/indicator-kdeconnect
-read -p "Soll das Programm KDE-Connect-Monitor (Zugriff von und aufs Handy) installiert werden? Dann drücke j!"
-#echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Jj]$ ]]
-then
-	##sudo add-apt-repository -y ppa:webupd8team/indicator-kdeconnect outdated!
-	sudo flatpak -y install flathub com.github.bajoja.indicator-kdeconnect
-	sudo apt -y install kdeconnect
-fi
-
-#Fritz!Box
-read -p "Soll das Programm Roger Router (ehemals ffgtk) für die Fritz!Box installiert werden? Dann drücke j!"
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Jj]$ ]]
-then
-sudo flatpak -y install flathub org.tabos.roger  
-fi
-
-#ProtonUp
-read -p "Soll das Programm ProtonUp-Qt installiert werden? Dann drücke j!"
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Jj]$ ]]
-then
-sudo flatpak -y install flathub net.davidotek.pupgui2  
-fi
-
-#Laptop Akkulaufzeit
-read -p "Ist dies ein Laptop? Soll die Akkulaufzeit erhöht werden? Dann drücke j!"
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Jj]$ ]]
-then
-	pakete=`echo "$pakete tlp tlp-rdw smartmontools ethtool"`
-	service=`echo "$service tlp.service"`
-	sudo flatpak -y install flathub com.github.d4nj1.tlpui
-	#TODO Find PPA for TLPUI - https://github.com/d4nj1/TLPUI
-fi
 
 #sudo snap install carnet
 
