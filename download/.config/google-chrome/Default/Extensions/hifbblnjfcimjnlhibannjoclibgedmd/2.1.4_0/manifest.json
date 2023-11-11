@@ -1,0 +1,31 @@
+{
+   "author": "Torbjorn Tyridal (ttyridal)",
+   "background": {
+      "persistent": true,
+      "scripts": [ "src/bg/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/icon19.png",
+      "default_popup": "src/browser_action/browser_action.html",
+      "default_title": "MasterPassword"
+   },
+   "description": "Remember your MasterPassword, and this app will generate unique passwords for every other site you visit",
+   "homepage_url": "https://github.com/ttyridal/masterpassword-chrome",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "incognito": "split",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxMIpiNkRMqAlsnyv4Px4hZTfdYpfj9kmMyI9eX0q4lFL+5nKYViYvwAxb9FY4EPmois11L4Of4BSEmSZ366AWwmcR+sBvOn0peTTpZvVbnd4Y/U8OKouc0G7ihN9t6qLZ6RdpTc7ZY0roLBu2G5Bob3GOhx0oE4rafZeaNCk9I8m/GwRd4Risiw3B5calzGgWbAnTkKiDrFFpNgB3ZWGzn0NqP6ulrUxe8cn4A2sjfDPHSbyIym/aAhKXY2RIasextqbo0UsbxX1duo6f85rGXepsrNnwUDRfhinf8rxiZZzWcFjlSSB2SBAUdoRCiAyswgFWS5zpyQGFm1yyESAmwIDAQAB",
+   "manifest_version": 2,
+   "name": "MasterPassword for chrome",
+   "options_page": "src/options/index.html",
+   "options_ui": {
+      "chrome_style": true,
+      "page": "src/options/options.html"
+   },
+   "permissions": [ "activeTab", "clipboardWrite", "storage", "alarms", "downloads", "nativeMessaging", "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.1.4"
+}
