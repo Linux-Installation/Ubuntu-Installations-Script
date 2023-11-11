@@ -1,5 +1,0 @@
-plugins.plugin_installer.active = True
-plugins.url_image_preview.active = True
-plugins.omemo.active = True
-soundevents.contact_connected.enabled = False
-soundevents.contact_disconnected.enabled = False
