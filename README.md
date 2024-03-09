@@ -1,4 +1,4 @@
-Note: Because of the heavy snap use of Ubuntu, I will me and my users to another distribution (probably Linux Mint) and therfore this script won't be optimised for Ubuntu (Mate) in the Future and this repo will be archived!
+Note: Because of the heavy snap use of Ubuntu, I will switch me and my users to another distribution (probably Linux Mint) and therfore this script won't be optimised for Ubuntu (Mate) in the Future and this repo will be archived!
 
 # Ubuntu Installation - Installations Script
 ## Suported Distributions
