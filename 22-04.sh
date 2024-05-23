@@ -235,7 +235,7 @@ then
 fi
 
 paketerec="digikam exiv2 kipi-plugins graphicsmagick-imagemagick-compat hw-probe"
-pakete=`echo "$pakete synaptic krita-l10n ubuntu-restricted-extras pidgin pinta nfs-common language-pack-kde-de libdvd-pkg smartmontools unoconv mediathekview python3-axolotl python3-gnupg gnome-software gnome-software-plugin-flatpak language-pack-de fonts-symbola vlc libxvidcore4 libfaac0 gnupg2 lutris dayon kate konsole element-desktop redshift-gtk firefox-locale-de firefox"`
+pakete=`echo "$pakete synaptic krita-l10n ubuntu-restricted-extras pidgin pinta nfs-common language-pack-kde-de libdvd-pkg smartmontools unoconv mediathekview python3-axolotl python3-gnupg gnome-software gnome-software-plugin-flatpak language-pack-de fonts-symbola vlc libxvidcore4 libfaac0 gnupg2 lutris dayon kate konsole element-desktop redshift-gtk firefox-l10n-de firefox"`
 remove=`echo "$remove firefox*"`
 
 sudo snap remove firefox
@@ -248,11 +248,14 @@ sudo wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages
 echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main" | sudo tee /etc/apt/sources.list.d/element-io.list
 
 #Firefox ppa
-sudo add-apt-repository -y ppa:mozillateam/ppa
+wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
 #Don't use canonical firefox package
-sudo sh -c 'echo "Package: firefox*" >> /etc/apt/preferences.d/mozillateamppa'
-sudo sh -c 'echo "Pin: release o=LP-PPA-mozillateam" >> /etc/apt/preferences.d/mozillateamppa'
-sudo sh -c 'echo "Pin-Priority: 501" >> /etc/apt/preferences.d/mozillateamppa'
+echo '
+Package: *
+Pin: origin packages.mozilla.org
+Pin-Priority: 1000
+' | sudo tee /etc/apt/preferences.d/mozilla
 
 sudo add-apt-repository -y ppa:regal/dayon
 
@@ -294,7 +297,6 @@ sudo systemctl enable $service
 fi
 sudo apt -y --fix-broken install
 sudo dpkg-reconfigure -plow unattended-upgrades
-echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";' | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
 #Hardware probe
 sudo -E hw-probe -all -upload
 sudo apt-get purge -y hw-probe
