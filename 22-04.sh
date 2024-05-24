@@ -45,7 +45,7 @@ if [ $i != "lost+found" ]
 then
     #dayon
     sudo mkdir -p /home/$i/.dayon
-	sudo mv -f $config/.dayon /home/$i
+	sudo cp -rf $config/.dayon /home/$i
 	#hide Dayon Assistant
 	sudo mkdir -p /home/$i/.local/share/applications
 	sudo mv $config/.local/share/applications/dayon_assistant.desktop /home/$i/.local/share/applications/
@@ -67,7 +67,7 @@ then
 	then
 		#echo $dir
 		sudo mkdir -p /home/$i/.config
-		sudo mv -f $config/.config/gajim /home/$i/.config								 
+		sudo cp -rf $config/.config/gajim /home/$i/.config								 
 	fi		
 	
 	#Google Chrome
@@ -88,7 +88,7 @@ then
 	then
 		#echo $dir
 		sudo mkdir -p /home/$i/.config
-		sudo mv -f $config/.config/google-chrome /home/$i/.config								 
+		sudo cp -rf $config/.config/google-chrome /home/$i/.config								 
 	fi		
 	
 	#Vivaldi
@@ -109,7 +109,7 @@ then
 	then
 		#echo $dir
 		sudo mkdir -p /home/$i/.config
-		sudo mv -f $config/.config/vivaldi /home/$i/.config								 
+		sudo cp -rf $config/.config/vivaldi /home/$i/.config								 
 	fi	
 	
 	#firefox
@@ -129,11 +129,11 @@ then
 	if [ ! -d $dir ] || [ overwriteFirefox==true ]
 	then
 	    #echo $dir
-		sudo mv -f $config/.mozilla /home/$i/
+		sudo cp -rf $config/.mozilla /home/$i/
 	fi
 	#autostart
 	sudo mkdir -p /home/$i/.config/autostart/
-	sudo mv -f $config/.config/autostart/* /home/$i/.config/autostart/*
+	sudo cp -rf $config/.config/autostart/* /home/$i/.config/autostart/*
 	sudo chown -R $i:$i /home/$i	
 fi
 done
