@@ -297,6 +297,11 @@ sudo systemctl enable $service
 fi
 sudo apt -y --fix-broken install
 sudo dpkg-reconfigure -plow unattended-upgrades
+sudo cp -f $config/50unattended-upgrades /etc/apt/apt.conf.d/50unattended-upgrades
+sudo cp -f $config/firefoxUpdateOnShutdown.service /etc/systemd/system/firefoxUpdateOnShutdown.service
+sudo systemctl daemon-reload
+sudo systemctl enable firefoxUpdateOnShutdown.service
+
 #Hardware probe
 sudo -E hw-probe -all -upload
 sudo apt-get purge -y hw-probe
