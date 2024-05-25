@@ -17,7 +17,7 @@ This is my post Installation script which "automate" tasks which I do after inst
 
 ### software repositories
 - [Element](https://element.io/get-started)
-- [Firefox](https://launchpad.net/~mozillateam/+archive/ubuntu/ppa) 
+- [Firefox](https://mzl.la/1xKrIV5) 
 - (Optional) [Mesa for Gaming on AMD/Intel](https://github.com/ValveSoftware/Proton/wiki/Requirements#amdintel)
 - activate Canoncial Partner repository
 
