@@ -8,6 +8,6 @@ Before=shutdown.target
 
 [Service]
 Type=oneshot
-ExecStart=systemd-inhibit apt install -y --only-upgrade firefox*
+ExecStart=apt install -y --only-upgrade firefox*
 [Install]
 WantedBy=shutdown.target
