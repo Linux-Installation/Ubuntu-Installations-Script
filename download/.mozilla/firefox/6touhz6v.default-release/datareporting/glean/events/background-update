@@ -1,0 +1,2 @@
+{"timestamp":1583455,"category":"nimbus_events","name":"validation_failed","extra":{"experiment":"custom-messaging-in-aboutwelcome-for-chrome-users-to-import","glean_timestamp":"1716725668163","reason":"invalid-recipe"}}
+{"timestamp":1610715,"category":"nimbus_events","name":"validation_failed","extra":{"reason":"invalid-recipe","glean_timestamp":"1716725695423","experiment":"custom-messaging-in-aboutwelcome-for-chrome-users-to-import"}}
